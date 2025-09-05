@@ -1,0 +1,602 @@
+.babonus.keys-dialog {
+  min-width: 400px;
+
+  .dialog-content {
+
+    .table {
+      margin: 0;
+      border-radius: 0;
+
+      & header {
+        display: grid;
+        grid-template-columns: 2fr 3fr;
+
+        .value, .state {
+          flex: 1;
+          border: none;
+          font-size: 20px;
+          margin: 10px auto;
+          text-align: center;
+        }
+      }
+
+      .body {
+        max-height: 400px;
+        overflow: hidden auto;
+
+        .category { font-weight: bold; }
+
+        .row {
+          display: grid;
+          grid-template-columns: 2fr 3fr;
+
+          .value, .select {
+            padding: 0;
+            line-height: 2em;
+
+            & img { height: 1.5em; border: none; }
+
+            &.select {
+              display: flex;
+              align-items: center;
+              gap: 1em;
+              margin: 0 1em;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+div.babonus.optionals {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+  padding: 0.5em;
+  border: 1px inset;
+  border-radius: 0.5em;
+  margin-bottom: 1em;
+  max-height: 450px;
+  overflow-y: auto;
+
+  .optional {
+    display: grid;
+    gap: 0.5em;
+
+    &:not(:last-child) {
+      border-bottom: 2px groove;
+      padding-bottom: 0.5em;
+    }
+
+    & button {
+      display: flex;
+      padding: 3px;
+      justify-content: center;
+    }
+
+    &.active button {
+      background: inherit;
+      border: none;
+      box-shadow: none;
+      pointer-events: none;
+
+      & > i:before {
+        content: "\f00c";
+      }
+    }
+
+    &.active .consumption {
+      pointer-events: none;
+
+      & > * {
+        color: gray;
+      }
+    }
+
+    .bonus-text .name {
+      font-weight: bold;
+      font-style: italic;
+    }
+
+    .consumption {
+      display: flex;
+      align-items: center;
+
+      .label {
+        flex: 1;
+        font-weight: bold;
+        color: #4b4a44;
+      }
+
+      & select {
+        flex: 2;
+      }
+    }
+  }
+
+  .reminders:not(:last-child) {
+    border-bottom: 2px groove;
+    padding-bottom: 0.5em;
+  }
+}
+
+.babonus.optionals {
+  .description:empty::before,
+  .description:not(:empty) > :first-child::before {
+    content: var(--bonus-name);
+    font-weight: bold;
+    margin-right: 5px;
+  }
+
+  .reminder::before {
+    display: none;
+  }
+}
+
+fieldset.babonus.optionals {
+  .optional:last-of-type + hr { display: none; }
+
+  .optional .form-group button {
+    flex: 0 0 var(--form-field-height);
+    height: var(--form-field-height);
+    padding: 0;
+    margin-left: 0.5rem;
+
+    .fa-solid {
+      margin: 0;
+    }
+
+    &:hover {
+      box-shadow: 0 0 6px var(--dnd5e-color-gold);
+    }
+  }
+
+  .optional.active .form-group :is(select, button) {
+    pointer-events: none;
+    background: inherit;
+    color: gray;
+    border-color: rgba(255, 255, 255, 0);
+    box-shadow: none;
+  }
+
+  .optional.active .form-group button .fa-solid::before {
+    content: "\f00c";
+  }
+}
+.babonus.overview table :is(td, th) {
+  text-align: center;
+}
+.dnd5e-theme-dark .babonus.dnd5e2 {
+  --dnd5e-background-card: var(--dnd5e-color-card);
+
+  & form select option, form select optgroup {
+    background: inherit;
+  }
+}
+
+.babonus.dnd5e2 {
+  background:
+    url(../../../systems/dnd5e/ui/texture1.webp) no-repeat top center / auto 770px,
+    url(../../../systems/dnd5e/ui/texture2.webp) no-repeat bottom center / auto 704px,
+    var(--dnd5e-color-parchment);
+  border: 1px solid var(--dnd5e-color-gold);
+
+  &.minimized .header-button,
+  .header-button.configure-sheet {
+    display: none;
+  }
+
+  &:not(.minimized) .window-header .window-title {
+    visibility: hidden;
+  }
+
+  .window-header {
+    margin-left: 3px;
+    margin-right: 3px;
+
+    .window-title {
+      color: initial;
+    }
+  }
+
+  .window-content {
+    background: transparent;
+    overflow: hidden;
+    margin-left: 3px;
+    margin-right: 3px;
+  }
+
+  & input:disabled {
+    border: gray;
+  }
+
+  &.create-document ol img {
+    filter: invert(0);
+  }
+}
+
+.babonus h1.otters {
+  text-align: center;
+  font-size: 50px;
+  display: flex;
+  justify-content: center;
+  flex: none;
+
+  .mirror {
+    transform: scaleX(-1);
+    transition: 0.5s;
+  }
+
+  .name-stacked {
+    .title {
+      font-size: 25px;
+      border-bottom: 2px solid var(--dnd5e-color-gold);
+      padding-left: 0.5em;
+      padding-right: 0.5em;
+      margin: 0 0.5em;
+    }
+
+    .subtitle {
+      font-size: 14px;
+    }
+  }
+}
+
+.dnd5e-theme-dark .dnd5e2.sheet.actor h1.otters {
+  color: var(--dnd5e-color-gold);
+}
+
+.dnd5e2.sheet.actor {
+  & form.tab-babonus .create-child {
+    display: block;
+  }
+
+  .tab.babonus {
+    flex-direction: column;
+
+    .items-section {
+      .item { display: flex; }
+      .bonus-source {
+        width: 150px;
+        border: none;
+
+        &.item-detail {
+          color: var(--color-text-dark-5);
+
+          &.empty::after {
+            content: "-";
+            color: var(--color-text-light-6);
+            font-weight: normal;
+          }
+        }
+      }
+
+      [data-action=contextMenu] {
+        position: absolute;
+        inset-block: 0;
+        inset-inline-end: 0;
+        width: 1.5rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    }
+  }
+}
+
+.babonus.content-link[data-link][data-uuid] {
+  .fa-otter {
+    transition: transform 200ms ease;
+  }
+
+  &:not(.enabled) .fa-otter {
+    transform: rotate(180deg);
+  }
+}
+.babonus.sheet {
+  max-height: 95%;
+
+  .sheet-tabs.tabs .item {
+    flex-direction: column;
+
+    .fa-solid {
+      font-size: 20px;
+    }
+  }
+
+  .notification.info {
+    margin: 0.5em 0;
+    padding: 6px 8px;
+  }
+
+  .tab.scrollable {
+    min-height: 400px;
+
+    &[data-tab=bonuses] {
+      padding-bottom: 5rem;
+    }
+
+    &[data-tab=configuration] {
+      padding-bottom: 5rem;
+    }
+
+    &[data-tab=advanced] {
+      padding-bottom: 5rem;
+    }
+
+    &[data-tab=filters] .scrollable {
+      padding-bottom: 5rem;
+    }
+  }
+
+  .modifiers.example {
+    position: sticky;
+    top: 0;
+  }
+
+  & fieldset:hover > .hint {
+    color: var(--color-form-hint-hover);
+  }
+
+  /* Arbitrary Comparisons */
+  & select[name^="filters.arbitraryComparisons"] {
+    flex: 0;
+    width: fit-content;
+  }
+
+  /* Custom Scripts */
+  & textarea[name^="filters.customScripts"] {
+    resize: vertical;
+    min-height: calc(3rem + var(--form-field-height));
+    overflow-y: hidden;
+  }
+
+  & [data-action="keysDialog"] {
+    width: 100px;
+    max-width: 100px;
+    height: 26px;
+  }
+
+  & [data-action="deleteFilter"] {
+    flex: none;
+    padding-left: 0.5em;
+  }
+
+  .header.name-stacked {
+    display: flex;
+    padding: 0 5px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-bottom: calc(3px - 1rem);
+
+    & img {
+      flex: none;
+      width: 60px;
+      height: 60px;
+    }
+
+    & input {
+      flex: 1;
+      height: 40px;
+      margin: 10px 5px;
+      font-family: "Modesto Condensed";
+      font-size: 32px;
+    }
+
+    .properties {
+      width: 100%;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      gap: 3px;
+      margin-top: 3px;
+
+      .property {
+        margin: 0;
+        padding: 2px 4px;
+        background: rgba(0, 0, 0, 0.05);
+        border: 1px groove var(--color-fieldset-border);
+        border-radius: 3px;
+        font-size: 12px;
+        white-space: nowrap;
+      }
+    }
+  }
+
+  [data-tab=filters] {
+    flex-direction: row;
+
+    .toc {
+      flex: 0 0 160px;
+      list-style: none;
+      padding: 0;
+
+      & li {
+        margin: 5px 0;
+        border: 1px groove rgba(0, 0, 0, 0);
+        border-radius: 3px;
+        padding: 3px;
+
+        &.viewed {
+          border-color: var(--color-fieldset-border);
+        }
+      }
+    }
+
+    .picker .filter {
+      margin-top: 1rem;
+      cursor: pointer;
+      transition: border-color 200ms ease;
+
+      &:hover {
+        border-color: var(--button-hover-background-color);
+      }
+    }
+  }
+}
+
+.dnd5e-theme-light .babonus.sheet {
+  .sheet-tabs .item {
+    color: black;
+  }
+
+  .properties .property,
+  .toc .viewed {
+    --color-fieldset-border: black;
+  }
+
+  .picker .filter:hover {
+    --button-hover-background-color: black;
+  }
+}
+.babonus.builder .locked a {
+  color: gray;
+}
+.babonus.builder {
+  min-height: 500px;
+  min-width: 450px;
+}
+.babonus.builder .window-header {
+  border: none;
+  align-items: center;
+}
+.babonus.builder .window-content {
+  overflow: hidden;
+}
+.babonus.builder .pages {
+  overflow-y: hidden;
+  flex: 1;
+  display: flex;
+  height: 100%;
+  gap: 10px;
+}
+.babonus.builder .pages .header {
+  height: 30px;
+  border: 1px solid var(--color-border-light-tertiary);
+  background: rgba(0, 0, 0, 0.1);
+  padding-left: 0.5em;
+  border-radius: 4px;
+  font-family: var(--dnd5e-font-roboto-slab);
+  font-size: var(--font-size-13);
+  font-weight: bolder;
+  line-height: 30px;
+}
+.babonus.builder .pages .select-type,
+.babonus.builder .pages .current-bonuses {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  overflow: hidden;
+}
+.babonus.builder .pages .current-bonuses {
+  flex: 1;
+}
+.babonus.builder .pages .select-type.hidden .types {}
+.babonus.builder .pages .select-type.hidden .types a {
+  grid-template-columns: 100%;
+  padding: 0;
+}
+.babonus.builder .pages .select-type.hidden .types a > i {
+  font-size: 40px;
+}
+.babonus.builder .pages .select-type.hidden .types .label {
+  display: none;
+}
+.babonus.builder .pages .select-type .types {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  font-size: 26px;
+  min-width: 120px;
+  flex: 1;
+  max-height: calc(75px * 6);
+}
+.babonus.builder .pages .select-type .types a {
+  display: grid;
+  grid-template-columns: 50px 3fr;
+  align-items: center;
+  padding-left: 10px;
+}
+.babonus.builder .pages .select-type .types a > i {
+  place-self: center;
+  font-size: 25px;
+  transition: font-size 200ms;
+}
+.babonus.builder .pages .current-bonuses .bonuses {
+  height: 100%;
+  overflow-y: auto;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  padding: 5px;
+  scrollbar-width: thin;
+  scrollbar-color: var(--dnd5e-color-gold) transparent;
+}
+.babonus.builder .pages .current-bonuses .bonuses .bonus {
+  border-bottom: 2px groove;
+  padding: 0.5em 0;
+}
+.babonus.builder .pages .current-bonuses .bonuses .bonus .bonus-header {
+  display: grid;
+  grid-template-columns: 1fr 0fr;
+  margin-bottom: 10px;
+  gap: 5px;
+}
+.babonus.builder .pages .current-bonuses .bonuses .bonus .bonus-header .functions {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  font-size: 12px;
+  gap: 8px;
+}
+.babonus.builder .pages .current-bonuses .bonuses .bonus .bonus-header .label {
+  text-align: center;
+  font-size: 25px;
+  font-family: 'Modesto Condensed';
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.babonus.builder .pages .current-bonuses .bonuses .bonus .bonus-header .label.disabled {
+  text-decoration: line-through;
+}
+.babonus.builder .pages .current-bonuses .bonuses .bonus .bonus-header .label .fa-solid {
+  font-size: 18px;
+  padding: 4px;
+}
+.babonus.builder .pages .current-bonuses .bonuses .bonus .bonus-header [data-action="current-id"] {
+  color: gray;
+  font-size: 12px;
+  font-family: monospace;
+}
+.babonus.builder .pages .current-bonuses .bonuses .bonus .description {
+  font-style: italic;
+  border-radius: 5px;
+  padding: 0.5em;
+  background-color: rgba(181, 179, 164, 0.5);
+  user-select: text;
+  max-height: fit-content;
+  overflow: hidden;
+  opacity: 1;
+}
+.babonus.builder .pages .current-bonuses .bonuses .bonus.collapsed .description {
+  display: none;
+}
+@keyframes rainbow {
+  to { background-position: 0 -200% }
+}
+.babonus.builder .vomit {
+  background: linear-gradient(rgba(255, 0, 0, 1) 0%,
+      rgba(255, 154, 0, 1) 10%,
+      rgba(208, 222, 33, 1) 20%,
+      rgba(79, 220, 74, 1) 30%,
+      rgba(63, 218, 216, 1) 40%,
+      rgba(47, 201, 226, 1) 50%,
+      rgba(28, 127, 238, 1) 60%,
+      rgba(95, 21, 242, 1) 70%,
+      rgba(186, 12, 248, 1) 80%,
+      rgba(251, 7, 217, 1) 90%,
+      rgba(255, 0, 0, 1) 100%) 0 0/100% 200%;
+  animation: rainbow 5000ms linear infinite;
+}

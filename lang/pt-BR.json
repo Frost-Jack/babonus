@@ -1,0 +1,461 @@
+{"BABONUS": {
+  "AvailableFiltersTooltip": "A lista de filtros que você pode aplicar a este bônus, restringindo ainda mais a quais jogadas ele deve ser aplicado. Cada filtro deve ser verdadeiro para que o bônus seja aplicado",
+  "Babonus": "Babonus",
+  "TestBabonus": "Teste de Atributo Babonus",
+  "AttackBabonus": "Rolagem de Ataque Babonus",
+  "DamageBabonus": "Rolagem de Dano Babonus",
+  "HitdieBabonus": "Dado de Vida Babonus",
+  "SaveBabonus": "CD de Salvaguarda Babonus",
+  "ThrowBabonus": "Salvaguarda Babonus",
+  "BasicBonuses": "Bônus Básicos",
+  "BonusCopy": "{name} (Copy)",
+  "ConfigurationConsumptionConsume": "Consumir:",
+  "ConfigurationCopyTooltip": "Crie uma duplicata deste bônus",
+  "ConfigurationEditTooltip": "Edite este bônus",
+  "ConsumptionOption": "({value}) de {max} {label}",
+  "ContextMenu": {
+    "Delete": "Excluir",
+    "Disable": "Desabilitar",
+    "Duplicate": "Duplicar",
+    "Edit": "Editar",
+    "Enable": "Habilitar"
+  },
+  "Create": "Criar Novo Bônus",
+  "CurrentBonuses": "Bônus Atuais",
+  "CurrentBonusesTooltip": "Os bônus que você criou e que estão atualmente armazenados neste Ator, Item ou Efeito Ativo.",
+  "CurrentFiltersTooltip": "Os filtros atualmente aplicados ao bônus, restringindo ainda mais a quais jogadas ele deve ser aplicado. Cada filtro deve ser verdadeiro para que o bônus seja aplicado.",
+  "Example": "Exemplo",
+  "Fields": {
+    "Aura": {
+      "Blockers": {
+        "Hint": "Os tipos de condições que impedem a transferência de uma aura, como a aura de um Paladino que só fica ativa enquanto o Paladino não está Morto nem Inconsciente.",
+        "Label": "Condições de Bloqueio"
+      },
+      "Disposition": {
+        "Hint": "Quais alvos devem ser afetados por esta aura, em relação à disposição do token de origem.",
+        "Label": "Alvos Válidos",
+        "OptionAlly": "Alvos Aliados",
+        "OptionAny": "Quaisquer Alvos",
+        "OptionEnemy": "Alvos Inimigos"
+      },
+      "Enabled": {
+        "Hint": "Configure se e como o bônus funciona como uma aura.",
+        "Label": "Habilitar"
+      },
+      "Label": "Aura Configuração",
+      "Range": {
+        "Hint": "O alcance da aura, medido em pés (coloque '-1' para um alcance ilimitado). Este campo suporta dados de rolagem.",
+        "Label": "Alcance",
+        "LabelFt": "Alcance ({range} pés)",
+        "LabelUnlimited": "Alcance ({range})"
+      },
+      "RequireLight": {
+        "Hint": "Se marcada, a aura será restringida por qualquer coisa que bloqueie a luz",
+        "Label": "Luz"
+      },
+      "RequireMove": {
+        "Hint": "Se marcada, a aura será restringida por qualquer coisa que bloqueie o deslocamento.",
+        "Label": "Deslocamento"
+      },
+      "RequireSight": {
+        "Hint": "Se marcada, a aura será restringida por qualquer coisa que bloqueie a visão.",
+        "Label": "Visão"
+      },
+      "RequireSound": {
+        "Hint": "Se marcada, a aura será restringida por qualquer coisa que bloqueie o som.",
+        "Label": "Som"
+      },
+      "Self": {
+        "Hint": "Se a aura deve afetar seu dono, independente de qualquer outro comportamento de marcação.",
+        "Label": "Afeta a Si Mesmo?"
+      },
+      "Template": {
+        "Hint": "Se a aura afeta a área dentro de um modelo ao invés de ter um alcance (para itens que são capazes de colocar um modelo).",
+        "Label": "Aplicar ao Modelo?"
+      }
+    },
+    "Consume": {
+      "Enabled": {
+        "Hint": "Configure se e como o bônus consome uma propriedade. Um bônus não pode ser definido para consumo, a menos que seja opcional.",
+        "Label": "Habilitar"
+      },
+      "Formula": {
+        "Hint": "A fórmula pela qual o bônus aumenta em cada etapa.",
+        "Label": "Fórmula de Escala"
+      },
+      "Label": "Consumo Configuração",
+      "Scales": {
+        "Hint": "Decida se este bônus pode consumir mais do que o valor base da propriedade consumida e dimensiona seu bônus de acordo.",
+        "Label": "Habilitar Escala"
+      },
+      "Subtype": {
+        "CurrencyLabel": "Denominação",
+        "HitdiceLabel": "Tamanho do Dado de Vida"
+      },
+      "Type": {
+        "Label": "Tipo de Consumo",
+        "OptionEffect": "Efeito Ativo",
+        "OptionSlots": "Espaço de Magia"
+      },
+      "Values": {
+        "Hint": "O valor que será consumido ao optar por este bônus.",
+        "HintScale": "Os valores mínimo e máximo que podem ser consumidos ao optar por este bônus.",
+        "HintScaleSlot": "Os tamanhos mínimo e máximo de um espaço de magia para ativar este bônus. Se um espaço de magia maior que esse máximo for consumido, ele não concederá nenhum benefício adicional.",
+        "HintSlot": "O tamanho mínimo de um espaço de magia necessário para optar por este bônus.",
+        "Label": "Valores Consumidos",
+        "LabelSlot": "Tamanho do Espaço de Magia",
+        "Max": "Máximo",
+        "MaxSlot": "Maior",
+        "Min": "Mínimo",
+        "MinSlot": "Menor"
+      },
+      "ValueStep": {
+        "Hint": "O delta, ou etapa, das escolhas ao consumir.",
+        "Label": "Etapa"
+      }
+    },
+    "Description": {
+      "Hint": "O texto que acompanha este bônus. Embora não seja obrigatório, isso é mostrado nas dicas de ferramentas, bem como em dicas de bônus opcionais.",
+      "Label": "Descrição"
+    },
+    "Enabled": {
+      "Hint": "Ative ou desative este bônus. Um bônus desativado será completamente ignorado",
+      "Label": "Habilitado"
+    },
+    "Exclusive": {
+      "Hint": "Alterne se este bônus se aplica apenas ao item em que foi criado. Um bônus não pode ser definido para ser aplicado apenas a um item específico, a menos que seja criado nesse item e aplicado a ataques, danos, CDs de salvaguarda ou testes de ferramentas.",
+      "Label": "Exclusivo"
+    },
+    "Img": {
+      "Hint": "A imagem deste bônus que será exibida quando relevante.",
+      "Label": "Imagem"
+    },
+    "Optional": {
+      "Hint": "Alterne se este bônus deve ser ativado ao rolar. Um bônus não pode ser definido como opcional, a menos que forneça um bônus aditivo além de uma jogada de ataque, jogada de dano, salvaguarda ou teste de atributo.",
+      "Label": "Opcional"
+    },
+    "Reminder": {
+      "Hint": "Alterne se este bônus serve apenas como um lembrete. Para usar isso, ele não deve conceder nenhum bônus ou modificação de dados. Este recurso também está disponível apenas para rolagens que possuam uma caixa de diálogo de configuração.",
+      "Label": "Lembrete"
+    }
+  },
+  "Filters": {
+    "Abilities": {
+      "Hint": "Filtre pelo valor de habilidade que está sendo usado para o teste. Este filtro respeitará os itens que estão configurados para usar seu valor de habilidade Padrão, como magias configuradas para usar o atributo de Conjuração ou armas que são Acuidade.",
+      "Label": "Modificador de Atributo"
+    },
+    "ActorCreatureSizes": {
+      "Hint": "Filtre pelo tamanho da criatura do ator, exigindo que o ator que realizar a rolagem seja de uma das categorias de tamanho de criatura escolhida.",
+      "Label": "Tamanhos de Criatura"
+    },
+    "ActorCreatureTypes": {
+      "Hint": "Filtre pelo tipo de criatura que o ator que realizar a rolagem deve ser (ou ter como subtipo), ou pelo tipo de criatura que o ator que realizar a rolagem não deve ser. Por exemplo, 'undead', 'fey' ou 'construct'. Para designar um tipo de criatura como subtipo, escreva quantos quiser no campo Subtipo do ator, separados por '/'.",
+      "Label": "Tipos de Criatura do Ator"
+    },
+    "ActorLanguages": {
+      "Hint": "Filtre pelos idiomas que o ator pode ou não falar, ler ou escrever. Isso levará em consideração se um ator pode falar um grupo inteiro de línguas, como o Primordial, em vez de apenas os dialetos específicos.",
+      "Label": "Idiomas Falados"
+    },
+    "ArbitraryComparisons": {
+      "Hint": "Insira números, propriedades de dados de rolagem, strings ou uma combinação dos três, que devem estar em um relacionamento específico para que o bônus seja aplicado. Esta comparação pode avaliar substrings usando qualquer uma das desigualdades. Você também pode usar dados de rolagem de um ator de token marcado, acrescentando '@target.",
+      "Label": "Comparação Arbitrária",
+      "One": "Valor…",
+      "Other": "Outro valor…"
+    },
+    "BaseArmors": {
+      "Hint": "Filtre pelo tipo de armadura que o ator deve ou não usar (incluindo escudos). Por exemplo, se quiser que o bônus seja aplicado apenas ao usar Cota de Malha ou sem armadura. Este filtro também pode levar em consideração categorias de armaduras como 'Armadura Leve'.",
+      "Label": "Tipos de Armadura"
+    },
+    "BaseTools": {
+      "Hint": "Filtre pelos tipos de ferramentas que o item que realizar a rolagem deve ser um ou nenhum. Por exemplo, se quiser que o bônus seja aplicado apenas ao usar um Kit de Herbalismo, Ferramentas de Ladrão ou Ferramentas de Sapateiro.",
+      "Label": "Tipos de Ferramenta"
+    },
+    "BaseWeapons": {
+      "Hint": "Filtre pelos tipos de armas em que o item que realizar a rolagem deve ser um ou nenhum deles. Por exemplo, se quiser que o bônus seja aplicado apenas ao usar um Machado de Batalha, Arco Curto ou Espada Longa. Este filtro também pode levar em consideração categorias.",
+      "Label": "Tipos de Arma"
+    },
+    "CreatureTypes": {
+      "Hint": "Filtre pelo tipo de criatura que o ator alvo deve ser (ou ter como subtipo), ou pelo tipo de criatura que o ator alvo não deve ser. Por exemplo, 'undead', 'fey' ou 'construct'. Para designar um tipo de criatura como subtipo, escreva quantos quiser no campo Subtipo do ator, separados por '/'.",
+      "Label": "Tipos de Criatura Alvo"
+    },
+    "CustomScripts": {
+      "Hint": "Filtre usando qualquer script personalizado que você deseja escrever. O script deve ser completamente síncrono e retornar explicitamente verdadeiro ou falso. Como variáveis ​​auxiliares, o script é fornecido com o ator e o token daquele que realiza o teste ('actor' e 'token'), o item que está sendo usado ('item', se houver), e o bônus no qual este script é anexado ('bonus'). Essas variáveis ​​podem ser acessadas diretamente.",
+      "Label": "Script Personalizado"
+    },
+    "DamageTypes": {
+      "Hint": "Filtre pelo tipo de dano que deve ou não fazer parte da rolagem. Por exemplo, se uma magia deve causar dano ígneo ou elétrico.",
+      "Label": "Tipos de Dano"
+    },
+    "FeatureTypes": {
+      "Hint": "Filtre pelo tipo e subtipo que um item de característica deve ter. Por exemplo, um Recurso de Classe, Recurso de Ki ou Recurso de Monstro.",
+      "Label": "Tipos de Característica",
+      "SubtypeLabel": "Subtipo",
+      "TypeLabel": "Tipo"
+    },
+    "HealthPercentages": {
+      "Hint": "Filtre pela porcentagem de vida que o ator deve ter no mínimo ou no máximo. Por exemplo, se o ator que estiver realizando o teste deve ter 90% ou mais de vida restante.",
+      "Label": "Porcentagem de Vida",
+      "OptionLess": "Menor que",
+      "OptionMore": "Maior que",
+      "TypeLabel": "Tipo",
+      "ValueLabel": "Limite"
+    },
+    "ItemTypes": {
+      "Hint": "Filtre pelo tipo de item que está sendo usado para realizar a rolagem. Por exemplo, se o bônus se aplicar apenas a magias ou apenas a armas.",
+      "Label": "Tipos de Item"
+    },
+    "PreparationModes": {
+      "Hint": "Filtre pelo tipo de modo de preparação que uma magia deve ser definido para que o bônus seja aplicado. Por exemplo, ao usar uma magia preparado como Magia de Pacto ou Conjuração de Ritual.",
+      "Label": "Modos de Preparação"
+    },
+    "ProficiencyLevels": {
+      "Hint": "Filtre pelo nível de proficiência da rolagem. Por exemplo, se o bônus só for aplicado se a ferramenta usada for rolada com especialidade ou se uma salvaguarda não for proficiente.",
+      "Label": "Níveis de Proficiência"
+    },
+    "RemainingSpellSlots": {
+      "Hint": "Filtre pelo número total mínimo e máximo de espaços de magia que o ator que realizar o teste deve ter restantes para que o bônus seja aplicado. Por exemplo, se você quiser que um bônus seja aplicado somente se você tiver 3 espaços de magia ou mais restantes, ou nenhum espaço de magia restante. Isso pode ser alternado de modo que cada espaço de magia restante tenha um valor igual ao seu tamanho.",
+      "Label": "Espaços de Magia Restantes",
+      "RangesLabel": "Alcance",
+      "SizeHint": "Leve em consideração o tamanho do espaço de magia, o que significa que um espaço de magia de 5º nível conta como um valor de cinco. Caso contrário, cada espaço de magia conta como um.",
+      "SizeLabel": "Tamanho"
+    },
+    "SaveAbilities": {
+      "Hint": "Filtre pelo valor de atributo que deve ser usado para definir a CD da salvaguarda do item para que o bônus seja aplicado. Por exemplo, um Guerreiro Mestre de Batalha que determina sua CD de suas Manobra com Destreza. Isso pode ser diferente da habilidade que o item usa. Se um item for definido para escalar com 'Conjuração', a habilidade de conjuração do ator que realiza a rolagem é usada para comparação.",
+      "Label": "CD Atributo Salvaguarda"
+    },
+    "SkillIds": {
+      "Hint": "Filtre pelos tipos de perícias que o teste que está sendo realizado deve ser uma ou nenhuma. Por exemplo, se o bônus for aplicado apenas a testes de perícia feitos com Atletismo, Natureza ou Sobrevivência.",
+      "Label": "Perícias"
+    },
+    "SpellComponents": {
+      "Hint": "Filtre pelos componentes ou tags que a magia que está sendo conjurada deve ter. Você pode escolher se a magia deve ter todos os componentes ou tags fornecidos, ou pelo menos um deles. Por exemplo, se você quiser que um bônus seja aplicado a todas as magias que exigem concentração ou a todas as magias com um componente material.",
+      "Label": "Componentes de Magia",
+      "MatchAll": "Corresponder todos",
+      "MatchAny": "Corresponder qualquer um",
+      "MatchLabel": "Correspondendo",
+      "TypesLabel": "Tipos"
+    },
+    "SpellLevels": {
+      "Hint": "Filtre pelo nível em que a magia deve ser conjurada. Por exemplo, você pode aplicar um bônus apenas a truques, apenas a magias de nível ou apenas a magias de 3º nível ou menor.",
+      "Label": "Níveis de Magia"
+    },
+    "SpellSchools": {
+      "Hint": "Filtre pela escola que a magia deve pertencer. Se diversas escolas forem selecionadas, a magia deverá pertencer a qualquer uma delas. Por exemplo, se você quiser que um bônus seja aplicado apenas a magias de Adivinhação ou Evocação.",
+      "Label": "Escolas de Magia"
+    },
+    "StatusEffects": {
+      "Hint": "Filtre pelas condições que o ator que realiza o teste deve ou não ser afetado. Isso levará em consideração qualquer imunidade à condição que o ator tenha, como imunidade a paralisado.",
+      "Label": "Condições no Ator"
+    },
+    "TargetArmors": {
+      "Hint": "Filtre pelo tipo de armadura que o alvo deve ou não usar (incluindo escudos). Por exemplo, se quiser que o bônus seja aplicado apenas quando o alvo estiver usando Cota de Malha ou sem armadura. Este filtro também pode levar em consideração categorias de armaduras como 'Armadura Leve'.",
+      "Label": "Armadura do Alvo"
+      },
+    "TargetEffects": {
+      "Hint": "Filtre pelas condições que o ator alvo deve ou não ser afetado. Isso levará em consideração qualquer imunidade à condição que o ator tenha, como imunidade a paralisado.",
+      "Label": "Condições no Alvo"
+    },
+    "ThrowTypes": {
+      "Hint": "Filtre pelo tipo de salvaguarda que o bônus deve ser aplicado. Por exemplo, se o bônus deve ser aplicado apenas a salvaguardas de Inteligência ou Carisma, ou mesmo a Salvaguardas Contra Morte ou salvaguardas para manter a concentração em um efeito.",
+      "Label": "Tipos de Salvaguarda"
+    },
+    "TokenSizes": {
+      "Hint": "Filtre pelo tamanho de um token marcado e compare também com o token que realizar a rolagem. Por exemplo, se for necessário que um tokem marcado seja pelo menos 2x2, mas também maior que o token do ator que realizar a rolagem.",
+      "Label": "Tamanhos do Token",
+      "RangeLabel": "Tamanho",
+      "SelfHint": "Se marcado, o token alvo deve ser maior/menor que o tamanho do token do ator de origem, além do valor acima.",
+      "SelfLabel": "Comparar consigo mesmo",
+      "SizeGreaterThan": "Maior que",
+      "SizePlaceholder": "Tamanho…",
+      "SizeSmallerThan": "Menor que"
+    },
+    "WeaponProperties": {
+      "Hint": "Filtre pelas propriedades da arma que o item que está sendo usado para realizar a rolagem deve ter alguma ou não pode ter nenhuma. Por exemplo, se o bônus for aplicado apenas a armas de Duas Mãos ou armas Versáteis.",
+      "Label": "Propriedades da Arma"
+    }
+  },
+  "ID": "ID",
+  "Keys": "Keys",
+  "KeysDialogApplySelection": "Aplicar Seleção",
+  "KeysDialogExclude": "Excluir",
+  "KeysDialogInclude": "Incluir",
+  "KeysDialogState": "Estado",
+  "KeysDialogTitle": "Keys: {name}",
+  "KeysDialogValue": "Valor",
+  "Labels": {
+    "Consuming": "Consumindo",
+    "Disabled": "Desabilitado",
+    "Exclusive": "Item Exclusivo",
+    "Filters": "{n} Filtros",
+    "Optional": "Opcional",
+    "Reminder": "Lembrete",
+    "TemplateAura": "Aura Modelo",
+    "TokenAura": "Aura Token"
+  },
+  "Largest": "Maior",
+  "Modifiers": {
+    "Amount": {
+      "EnabledHint": "Permitir que este bônus faça alterações na quantidade de dados rolados.",
+      "EnabledLabel": "Modificação de Quantidade",
+      "Label": "Quantidade de Dados",
+      "ModeHint": "Seja para adicionar os dados adicionais ou multiplicar o valor por este valor.",
+      "ModeLabel": "Modo",
+      "ValueHint": "O aumento na quantidade de dados rolados.",
+      "ValueLabel": "Dado Adicional"
+    },
+    "Config": {
+      "FirstHint": "Se marcado, os modificadores de dados só se aplicam ao primeiro dado na expressão completa.",
+      "FirstLabel": "Apenas Primeiro Dado",
+      "Label": "Configuração de Dado",
+      "Enabled": "Habilitar Modificações",
+      "EnabledHint": "Alternar quais modificações de dados devem ser configuráveis ​​e aplicadas às rolagens de dados."
+    },
+    "Explode": {
+      "EnabledHint": "Permita que este bônus faça os dados explodirem.",
+      "EnabledLabel": "Dado Explosivo",
+      "Label": "Dado Explosivo",
+      "LimitHint": "A quantidade máxima de explosões permitidas. Se deixado em branco, não haverá nenhum limite aplicado.",
+      "LimitLabel": "Explosões Máximas",
+      "OnceHint": "Limite os dados para explodir no máximo uma vez.",
+      "OnceLabel": "Explodir Uma Vez",
+      "ValueHint": "O limite para o comportamento explosivo.",
+      "ValueLabel": "Limite"
+    },
+    "Maximum": {
+      "EnabledHint": "Permita que este bônus configure o resultado máximo obtido em cada dado.",
+      "EnabledLabel": "Resultados Máximos",
+      "Label": "Resultados Máximos",
+      "ValueHint": "O resultado máximo que pode ser rolado. Ao usar valores negativos, o teto será calculado de cima e não de baixo.",
+      "ValueLabel": "Valor Máximo",
+      "ZeroHint": "Permita 0 como valor final. Caso contrário, o resultado mínimo permitido será 1.",
+      "ZeroLabel": "Permitir Zero"
+    },
+    "Minimum": {
+      "EnabledHint": "Permita que este bônus configure o resultado mínimo obtido em cada dado.",
+      "EnabledLabel": "Resultados Mínimos",
+      "Label": "Resultados Mínimos",
+      "MaximizeHint": "Faça com que todos os dados sejam maximizados.",
+      "MaximizeLabel": "Maximizar",
+      "ValueHint": "O resultado mínimo que pode ser rolado. Ao usar valores negativos, o piso será calculado de cima e não de baixo.",
+      "ValueLabel": "Valor Mínimo"
+    },
+    "Modes": {
+      "ChoiceAdd": "Adicionar",
+      "ChoiceMultiply": "Multiplicar"
+    },
+    "Reroll": {
+      "EnabledHint": "Permita que este bônus faça com que os dados sejam rolados novamente.",
+      "EnabledLabel": "Comportamento de Nova Rolagem",
+      "InvertHint": "Se deve rolar novamente os dados que rolam acima do limite em vez de abaixo do limite.",
+      "InvertLabel": "Invertido",
+      "Label": "Re-rolar Dados",
+      "LimitHint": "A quantidade máxima de novas rolagens permitidas se for recursivo. Se deixado em branco, não haverá nenhum limite aplicado.",
+      "LimitLabel": "Re-rolagens Máximas",
+      "RecursiveHint": "Se deve rolar novamente os dados recursivamente.",
+      "RecursiveLabel": "Recursivo",
+      "ValueHint": "O limite para o comportamento de nova rolagem.",
+      "ValueLabel": "Limite"
+    },
+    "Size": {
+      "EnabledHint": "Permitir que este bônus faça alterações na categoria dos dados rolados.",
+      "EnabledLabel": "Modificação de Categoria",
+      "Label": "Categoria do Dado",
+      "ModeHint": "Seja para aumentar a categoria dos dados pela quantidade ou multiplicar as faces.",
+      "ModeLabel": "Modo",
+      "ValueHint": "O aumento da categoria dos dados rolados.",
+      "ValueLabel": "Aumento de Categoria"
+    }
+  },
+  "ModuleTitle": "Build-a-Bonus",
+  "NewBabonus": "Novo Babonus",
+  "OriginName": "Origem: {name}",
+  "OverviewActor": "Ator",
+  "OverviewCopied": "O uuid foi copiado para a área de transferência.",
+  "OverviewImmediateParent": "Pai Imediato",
+  "OverviewName": "Nome",
+  "OverviewTitle": "Bônus Aplicados",
+  "RegionConfigHint": "Abra o construtor para obter bônus nesta Região de cena. Isso se aplicará a qualquer Token contido na Região.",
+  "Relative": "Relativo",
+  "SearchBonuses": "Procurar Bônus",
+  "SelectType": "Selecione um Tipo",
+  "SelectTypeTooltip": "Selecione um tipo para seu novo bônus; o tipo de rolagem que deve ser aplicado.",
+  "SettingsAllowFumbleNegationHint": "Permitir que os modificadores do alcance de falha nas jogadas de ataque fiquem abaixo de 1?",
+  "SettingsAllowFumbleNegationName": "Permitir Falha Negativa",
+  "SettingsDisableCustomScriptFilterHint": "Desativa os filtros de 'Script Personalizado' para não ter seus valores lidos. Em vez disso, o filtro sempre retorna verdadeiro imediatamente. Habilite esta configuração se preferir que outros usuários não executem scripts.",
+  "SettingsDisableCustomScriptFilterName": "Desabilitar 'Script Personalizado'.",
+  "SettingsDisplayLabelHint": "Se marcado, o rótulo é exibido no cabeçalho dos atores, itens e efeitos aplicáveis.",
+  "SettingsDisplayLabelName": "Exibir Etiqueta",
+  "SettingsPadAuraRadius": "Raio da Aura Sem Grade",
+  "SettingsPadAuraRadiusHint": "Em cenas sem grade, aumentar o raio das auras devido ao tamanho do token?",
+  "SettingsShowAuraRangesHint": "Crie um indicador visual para os alcances de auras babonus. Isso não se aplica a auras modelo ou auras com alcance ilimitado. Se a origem estiver dentro de uma aura, ele será marcado em verde, caso contrário, em vermelho.",
+  "SettingsShowAuraRangesName": "Mostrar Alcances de Aura",
+  "SettingsShowBuilderForPlayersHint": "Se desabilitado, o ícone para abrir o módulo não estará disponível no cabeçalho para os jogadores.",
+  "SettingsShowBuilderForPlayersName": "Mostrar para Jogadores",
+  "SettingsShowSheetTab": "Aba na Ficha",
+  "SettingsShowSheetTabHint": "Adicione uma nova aba na ficha de personagem em vez de adicionar um botão de cabeçalho.",
+  "SheetTabs": {
+    "Advanced": "Avançado",
+    "Bonuses": "Bônus",
+    "Configuration": "Configuração",
+    "Description": "Descrição",
+    "Filters": "Filtros"
+  },
+  "ToggleBonus": "Alternar Bônus",
+  "Toggles": "Alterna",
+  "TypeAttack": {
+    "BonusHint": "Partes adicionais para adicionar no topo da jogada de ataque.",
+    "BonusLabel": "Bônus Jogadas de Ataque",
+    "CriticalRangeHint": "Um número inteiro a ser subtraído da margem de acerto crítico da jogada de ataque. Este campo respeita os dados de rolagem, mas não as rolagens de dados.",
+    "CriticalRangeLabel": "Modificador de Acerto Crítico",
+    "FumbleRangeHint": "Um número inteiro a ser subtraído da margem de falha crítica da jogada de ataque. Este campo respeita os dados de rolagem, mas não as rolagens de dados.",
+    "FumbleRangeLabel": "Modificador de Falha Crítica",
+    "Label": "Jogadas de Ataque"
+  },
+  "TypeDamage": {
+    "BonusHint": "Partes adicionais para adicionar no topo da jogada de dano.",
+    "BonusLabel": "Bônus Jogadas de Dano",
+    "CriticalBonusDamageHint": "Partes adicionais para adicionar no topo da jogada de dano crítico.",
+    "CriticalBonusDamageLabel": "Dano Crítico Adicional",
+    "CriticalBonusDiceHint": "Um número adicional de dados que devem ser rolados em um acerto crítico. Este campo respeita os dados de rolagem, mas não as rolagens de dados.",
+    "CriticalBonusDiceLabel": "Dado Crítico Adicional",
+    "DamageTypeHint": "O tipo de dano das partes adicionadas à rolagem de dano.",
+    "DamageTypeLabel": "Tipo de Dano",
+    "Label": "Jogadas de Dano"
+  },
+  "TypeHitdie": {
+    "BonusHint": "Partes adicionais para adicionar no topo da jogada de dados de vida.",
+    "BonusLabel": "Bônus Jogadas de Dados de Vida",
+    "Label": "Jogadas de Dados de Vida"
+  },
+  "TypeSave": {
+    "BonusHint": "Um número inteiro para adicionar à CD de uma salvaguarda. Este campo respeita os dados de rolagem, mas não as rolagens de dados.",
+    "BonusLabel": "Bônus CD Salvaguarda",
+    "Label": "CDs de Salvaguarda"
+  },
+  "TypeTest": {
+    "BonusHint": "Partes adicionais para adicionar no topo da jogada de teste de atributo.",
+    "BonusLabel": "Bônus Testes de Atributo",
+    "Label": "Testes de Atributo"
+  },
+  "TypeThrow": {
+    "BonusHint": "Partes adicionais para adicionar no topo da jogada de salvaguarda.",
+    "BonusLabel": "Bônus Salvaguardas",
+    "DeathSaveCriticalHint": "Um número inteiro a ser subtraído do limite que decide quando uma Salvaguarda Contra Morte resulta na restauração da consciência e em 1 ponto de vida. Este campo respeita os dados de rolagem, mas não as rolagens de dados.",
+    "DeathSaveCriticalLabel": "Limite Crítico Salvaguarda Contra Morte",
+    "Label": "Salvaguardas",
+    "TargetValueHint": "Um número inteiro para subtrair do requisito mínimo para ter um sucesso em uma salvaguarda. Este campo respeita os dados de rolagem, mas não as rolagens de dados.",
+    "TargetValueLabel": "Valor Alvo"
+  },
+  "Warning": {
+    "Consuming": {
+      "CurrencyUnavailable": "Você não tem a quantidade necessária dessa denominação.",
+      "EffectUnavailable": "O efeito associado não existe mais.",
+      "HealthUnavailable": "Você não tem pontos de vida suficientes.",
+      "HitdiceUnavailable": "Você não tem dados de vida suficientes restantes.",
+      "InspirationUnavailable": "Você não tem Inspiração.",
+      "QuantityUnavailable": "Você não tem a quantidade necessária do item associado.",
+      "SlotsUnavailable": "Você não tem espaços de magia restantes desse nível.",
+      "UsesUnavailable": "Você não tem o número necessário de cargas no item."
+    }
+  }
+}}
